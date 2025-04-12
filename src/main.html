@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Домівка тварин</title>
   <link rel="stylesheet" href="style.css">
   <!-- Bootstrap CSS -->
@@ -11,48 +11,33 @@
 <body>
   <div class="top">
     <div class="animal">
-      <img src="../assets/animal.jpg" alt="Animal Home" class="img">  
-        </div>
-        <div class = "text">
-            <h1>Домівка тварин</h1>
-            <p>Знайдіть свого пухнастика</div>
-          </div>
-      
+      <img src="../assets/image.png" alt="Animal Home" id="animalImage" style="width: auto; min-width:1080px;" class="rounded float-start">
+    </div>
+    <div class="text">
+      <h1 class="display-4">Домівка тварин</h1>
+      <p class="lead">Знайдіть свого пухнастика</p>
     </div>
   </div>
-  <div> 
+  <div
   <div class="bottom">
     <div class="functionality">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Домівка тварин</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Особистий кабінет</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Відгук</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Спільнота</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Пошук">
-              <button class="btn btn-outline-success" type="submit">Пошук</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+      <footer class="my-footer">
+        <!-- Навігація з використанням Bootstrap-класів -->
+        <nav class="nav justify-content-evenly">
+          <a href= "adopt.html" class="nav-link button-bottom">Головна</a>
+          <a href="donate.html" class="nav-link button-bottom">Оголошення</a>
+          <a href="volunteer.html" class="nav-link button-bottom">Спільнота</a>
+          <a href="shelter.html" class="nav-link button-bottom">Задонатити</a>
+          <a href="about.html" class="nav-link button-bottom">Про нас</a>
+        </nav>
+      </footer>
     </div>
   </div>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" 
+          crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>

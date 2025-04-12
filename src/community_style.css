@@ -23,3 +23,18 @@ html {
     background: linear-gradient(to right, #b3d9ff, #a2f0c1); 
     font-size: 1rem; 
   }
+
+  .sideBar {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f7f7f71f;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: solid 1px #f7f7f741;
+    box-shadow: 0 0 10px #f7f7f741 inset;
+    padding: 0;
+    margin: 0;
+  }

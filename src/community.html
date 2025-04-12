@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html>
-      <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-            <title>Спільнота</title>
-            <link rel="stylesheet" href="style.css">
-            <!-- Bootstrap CSS -->
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-      </head>
-      <body>
-       <div class = "top">
-            <div id="carouselExampleIndicators" class="carousel slide">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Спільнота</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
 
-       </div>
-       <div class = "bottom">
-            <div class="functionality">
-                  <footer class="my-footer">
-                    <!-- Навігація з використанням Bootstrap-класів -->
-                    <nav class="nav justify-content-evenly">
-                      <a href="main.html" class="nav-link button-bottom transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 duration-700">Головна</a>
-                      <a href="Offers.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Оголошення</a>
-                      <a href="community.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Спільнота</a>
-                      <a href="shelter.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Задонатити</a>                         </div>          
-                    </nav>
-                  </footer>
-                </div>
-                <div class="d-flex">
-                  <!-- Ліва панель -->
-                  <div class="sidebar">
-                    <h5>Меню</h5>
-                    <ul class="nav flex-column">
-                      <li class="nav-item"><a class="nav-link active" href="#">Головна</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#">Про нас</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#">Контакти</a></li>
-                    </ul>
-                  </div>
-                
-                  <!-- Основний контент -->
-                  <div class="flex-grow-1 p-4">
-                    <h1>Основний контент</h1>
-                    <p>Тут розміщується інформація, зображення, текст тощо 🐾</p>
-                  </div>
-                </div>
-      </body>
+  <!-- Контейнер зліва + основна частина -->
+  <div class="d-flex">
+    <!-- Ліва панель -->
+    <div class="bg-light p-3" style="width: 250px; min-height: 100vh;">
+      <h5>Фільтри / Пошук</h5>
+      <div class="searchWrapper">
+        <!-- Тут можна додати поле пошуку або інший контент -->
+      </div>
+    </div>
+
+    <!-- Основна частина (карусель і контент) -->
+    <div class="flex-grow-1 p-4">
+
+      <!-- Карусель -->
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Нижні кнопки -->
+  <footer class="my-footer mt-4">
+    <nav class="nav justify-content-evenly">
+      <a href="main.html" class="nav-link button-bottom transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 duration-700">Головна</a>
+      <a href="Offers.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Оголошення</a>
+      <a href="community.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Спільнота</a>
+      <a href="shelter.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Задонатити</a>
+    </nav>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

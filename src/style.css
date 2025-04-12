@@ -1,20 +1,23 @@
+/* Зображення в залежності від розміру екрана */
 @media (max-width: 1400px) {
   .animal #animalImage {
-    transform: scale(1.05); /* трішки збільшується */
+    transform: scale(1.05); 
   }
 }
 
 @media (max-width: 1000px) {
   .animal #animalImage {
-    transform: scale(1.1); /* ще більше */
+    transform: scale(1.1); 
   }
 }
 
 @media (max-width: 700px) {
   .animal #animalImage {
-    transform: scale(1.2);
+    transform: scale(1.2); 
   }
 }
+
+/* Базові стилі для тіла */
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
@@ -24,44 +27,98 @@ body {
   min-height: 100vh;
   width: 100%;
   display: flex;
-  background: linear-gradient(
-      to right, 
-      rgba(34, 87, 121, 0.65) 0%,
-      #37A3A5 46%,
-      #57CC98 100%
-    );
+  background: linear-gradient(to right, rgba(34, 87, 121, 0.65) 0%, #37A3A5 46%, #57CC98 100%);
   padding: 20px;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
 }
 
+/* Для адаптивних екранів */
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column; 
+    align-items: center;
+  }
+}
+
+.animal {
+  overflow:auto;
+}
+
+.button-bottom {
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  display: inline-block; /* Важливо для кнопок */
+}
+
+/* Збільшуємо кнопки на малих екранах */
+@media (max-width: 1200px) {
+  .button-bottom {
+    font-size: 1.3rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .button-bottom {
+    font-size: 1.4rem;
+    padding: 1.1rem 2.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-bottom {
+    font-size: 1.5rem;
+    padding: 1.2rem 3rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .animal #animalImage {
+    width: 200%;
+    max-width: 200%;
+    height: auto;
+    padding : 50px 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Адаптивне зображення */
 .animal #animalImage {
-  width: 100%;
-  max-width: 1920px;
+  max-width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
+  height: auto;
+  transition: transform 0.5s ease;
 }
 
+
+
+/* Текст */
 .text {
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 30px;
+  padding: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  /* При бажанні змінюй розмір */
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
-
+/* Футер */
 .my-footer {
   background: linear-gradient(to right, #37A3A5, #57CC98);
   padding: 25px 0;
 }
 
+/* Стилі для навігаційних посилань */
 .nav-link {
   color: black;
   font-weight: 500;
   text-decoration: none;
   position: relative;
-  margin: 0 15px; /* Відступ між пунктами */
+  margin: 0 15px;
   padding-bottom: 5px;
   transition: color 0.3s ease-in-out;
 }
@@ -78,7 +135,7 @@ body {
   bottom: 0;
   height: 3px;
   width: 0;
-  background-color:azure;
+  background-color: azure;
   transition: width 0.3s ease;
 }
 
@@ -87,8 +144,8 @@ body {
   width: 100%;
 }
 
-
-.nav-link.button-bottom{
+/* Стилі для кнопки в навігації */
+.nav-link.button-bottom {
   background-color: #37A3A5;
   color: white;
   padding: 10px 20px;
@@ -96,4 +153,25 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
   font-size: 2rem;
+}
+
+/* Додаткові медіа-запити для ще дрібніших екранів */
+@media (max-width: 600px) {
+  .top {
+    padding: 10px;
+  }
+
+  .text {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .button-bottom {
+    font-size: 1.6rem;
+    padding: 1.3rem 3.2rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
 }

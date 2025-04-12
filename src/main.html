@@ -11,7 +11,10 @@
 <body>
   <div class="top">
     <div class="animal">
-      <img src="../assets/image.png" alt="Animal Home" id="animalImage" style="width: auto; min-width:1080px;" class="rounded float-start">
+      <img srcset="../assets/image.png 1080w, ../assets/image.png 600w" 
+           sizes="(max-width: 1080px) 100vw, 1080px"
+           src="../assets/image.png" 
+           alt="Animal Home" id="animalImage" class="rounded float-start">
     </div>
     <div class="text">
       <h1 class="display-4">Домівка тварин</h1>

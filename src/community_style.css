@@ -1,0 +1,25 @@
+.top {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      background: linear-gradient(to right, rgba(34, 87, 121, 0.65) #06A487 24%, 0, #57CC98 100%);
+      padding: 20px;
+      flex-direction: row; 
+      align-items: center; 
+      justify-content: space-between; 
+}
+
+html {
+    font-size: clamp(14px, 2vw, 22px); 
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #b3d9ff, #a2f0c1); 
+    font-size: 1rem; 
+  }

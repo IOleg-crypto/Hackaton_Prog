@@ -47,10 +47,10 @@
   }
   .bottom {
     background-color: #1981C4;
-    padding: 30px 20px;
-    display: flex;
+    padding: 30px 50px;
+    display:grid;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content:space-between;
     gap: 20px;
     color: white;
   }

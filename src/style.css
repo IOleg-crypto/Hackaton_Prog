@@ -184,3 +184,11 @@ body {
     margin: 0 10px;
   }
 }
+
+#myModal .modal-title
+{
+  font-size: 2rem;
+  color: #37A3A5;
+  font-weight: bold;
+  text-align: center;
+}

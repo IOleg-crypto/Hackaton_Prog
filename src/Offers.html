@@ -7,13 +7,34 @@
   <link rel="stylesheet" href="offers.css">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-<div class="sideBar">
-  <input class="inputForm" type="search" placeholder="Знайти" aria-label="Знайти">
-</div>
-<div class="bottomBar">
-  <p>Hello</p>
-</div>
+  <div class="top-box">
+    <div class="sideBar">
+      <div class="searchWrapper">
+        <input class="inputForm" type="search" placeholder="Знайти" aria-label="Знайти">
+        <img src="../assets/filter.png" class="filterIcon">
+      </div>
+      <div class="favoriteButtonConteiner">
+        <button class="favoriteButton">
+          <img src="../assets/heart.png" class="heartIcon">
+          <p class="favoriteText">Улюблені</p>
+        </button>
+      </div>
+      <div class="requestButtonContainer">
+        <button class="requestButton">
+          <img src="../assets/request.png" class="requestIcon">
+          <p class="requestText">Запити</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottomBar">
+    <p>Hello</p>
+  </div>
 </body>
+
 </html>

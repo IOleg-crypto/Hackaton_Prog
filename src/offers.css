@@ -1,48 +1,50 @@
 body {
   margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: linear-gradient(115deg, #0D5B8F, #24696A,#368162);
-    overflow-y: auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(115deg, #0D5B8F, #24696A,#368162);
 }
 
+.top-box {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1; 
+  overflow: hidden;
+}
+
+
 .sideBar {
-  display:flex;
-  flex-direction:column;
-  width:300px;
-  flex:auto;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
   justify-content: flex-start;
-  align-items:first baseline;
+  align-items: flex-start;
   background-color: #f7f7f71f;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding-left:0;
-  border:solid 1px #f7f7f741;
+  border: solid 1px #f7f7f741;
   box-shadow: 0 0 10px #f7f7f741 inset;
-  margin-bottom: 60px;
+  padding: 0;
+  margin: 0;
 }
 
 .bottomBar {
-  display:flex;
-  flex-direction: row;
-  flex:auto;
-  height:60px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  height: 60px;
   width: 100%;
   background-color: #309CAF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputForm {
-  margin-top: 60px;
+  position:relative;
   background-color:#E9E7E7;
   border: solid 1px #bababa;
   width: 200px;
-  height: 50px;
-  margin-left: 30px;
+  height: 40px;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 13px;
   border-top-left-radius: 2px;
@@ -50,4 +52,85 @@ body {
   font-family: "Unbounded";
   padding-left: 10px;
   outline: none;
+  
+}
+.searchWrapper {
+  position: relative;
+  width: 200px;
+  margin-left: 30px;
+  margin-top: 60px;
+}
+
+.filterIcon {
+  position: absolute;
+  top: 50%;
+  right: 20px; 
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.favoriteButton {
+  display: flex;
+  align-items: center;        
+  justify-content: flex-start;
+  width: 300px;
+  height: 40px;
+  background-color: #ffffff00;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin-top: 40px;
+  margin-left: 0px;
+  gap: 6px;
+  margin-left: 0px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.15s;
+}
+
+.heartIcon {
+  width: 20px;
+  height: 20px;
+  display: block;              
+}
+
+.favoriteText {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;              
+  margin: 0;
+  padding: 0;
+}
+
+button.requestButton {
+  display: flex;
+  align-items: center;        
+  justify-content: flex-start;
+  width: 300px;
+  height: 40px;
+ 
+  background-color: #ffffff00;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin-top: 20px;
+  gap: 6px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.15s;
+}
+
+.requestIcon {
+  width: 20px;
+  height: 20px;
+  display: block;              
+}
+
+.requestText {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;              
+  margin: 0;
+  padding: 0;
 }

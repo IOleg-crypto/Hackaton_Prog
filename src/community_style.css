@@ -399,7 +399,7 @@ body {
 /* Секція загалом */
 #rates {
   padding: 40px 20px;
-
+  zoom : clamp(2 , 1, 6);
   font-size: 600px; /* загальний базовий розмір */
 }
 
@@ -471,5 +471,52 @@ body {
     margin-top: 10px;
   }
 }
+.raffles-content
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: clamp(120px, 50vw, 15000px);
+  height: clamp(120px, 50vw, 4000px);
+  border-radius: 100px;
+  background-color: #7DFF91;
+ 
+  margin-top: 100px;
+  margin-left : 100px;
+  margin-bottom: 100px;
+}
+
+.raffles-columns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+  flex-wrap: wrap;
+  font-size: medium;
+}
+
+.raffles-content {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.first-text,
+.second-text {
+  color: #0D5D8D;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.h1-description {
+  font-size: 1.1rem;
+  color: #333;
+}
+
 
 

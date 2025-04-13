@@ -1,0 +1,305 @@
+html {
+    font-size: clamp(14px, 2vw, 22px); 
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(to right,#0D5D8D, #2F7865 ); 
+    font-size: 1rem; 
+    border-radius: 0;
+  }
+
+.all{
+  display:flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+  .Hashtags{
+    font-family: unbounded;
+    font-size: 20px;
+    margin-top: 19px;
+    margin-bottom: 5px;
+    line-height: 0.7;
+  }
+
+  .Heady{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 70px;
+  }
+
+  .social_networks{
+    background-color: #D9D9D9;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 19px;
+    margin-bottom: 19px;
+    width: 250px;
+    padding:0;
+    
+  }
+  .facebook{
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  
+  .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding:0;
+  }
+
+
+
+
+.middle{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 400px;
+  
+}
+.search{
+  /* opacity: 0; */
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+  border-radius: 20px;
+  width:650px;
+  
+}
+
+.bar{
+  background-color: white;
+  width: 650px;
+  height: 50 px;
+  font-family: unbounded;
+  opacity: 1;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border:0  ;
+}
+
+.контент{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.channel{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background-color: white;
+  opacity: 0.5;
+  width: 600px;
+  border-radius: 20px;
+  height: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ICONS-channel{
+  height: 100%;
+  margin:5px;
+}
+
+.name-channel{
+  margin-top: 19px;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.doggy{
+  border-radius: 36px;
+  box-shadow: 0 4px 0.4 black;
+  margin-left: 80px;
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+.support{
+  font-family: unbounded;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+
+
+
+  .button-bottom {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    display: inline-block; /* Важливо для кнопок */
+    animation: example 5s linear 2s infinite alternate;
+    transition : ease-in-out delay-500 -translate-y-px-hover duration-700 scale-110-hover all 0.15s rounded-lg shadow-md;
+  }
+  
+  .button-bottom:hover {
+    transform: scale(1.1) translateY(-4px) rotate(-1deg);
+  }
+  .button-bottom::backdrop{
+    padding: 25px 0;
+    border-radius: 10px;
+  }
+  
+  /* Збільшуємо кнопки на малих екранах */
+  @media (max-width: 1200px) {
+    .button-bottom {
+      font-size: 1.3rem;
+      padding: 1rem 2.5rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .button-bottom {
+      font-size: 1.4rem;
+      padding: 1.1rem 2.7rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .button-bottom {
+      font-size: 1.5rem;
+      padding: 1.2rem 3rem;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .animal #animalImage {
+      width: 200%;
+      max-width: 200%;
+      height: auto;
+      padding : 50px 0;
+     
+    }
+  }
+  
+  /* Адаптивне зображення */
+  .animal #animalImage {
+    max-width: 100%;
+    height: auto;
+    height: auto;
+  }
+  
+  
+  
+  /* Текст */
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+  }
+  
+  /* Футер */
+  .my-footer {
+    background: linear-gradient(to right, #37A3A5, #57CC98);
+    padding: 25px 0;
+  }
+  
+  /* Стилі для навігаційних посилань */
+  .nav-link {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    margin: 0 15px;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link.active,
+  .nav-link:hover {
+    color: black;
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: azure;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link.active::after,
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Стилі для кнопки в навігації */
+  .nav-link.button-bottom {
+    background-color: #37A3A5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 2rem;
+  }
+  
+  /* Додаткові медіа-запити для ще дрібніших екранів */
+  @media (max-width: 600px) {
+    .top {
+      padding: 10px;
+    }
+  
+    .text {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+  
+    .button-bottom {
+      font-size: 1.6rem;
+      padding: 1.3rem 3.2rem;
+    }
+    .nav-link {
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+  }
+  
+  #myModal .modal-title
+  {
+    font-size: 2rem;
+    color: #37A3A5;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  

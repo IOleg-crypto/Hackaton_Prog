@@ -18,7 +18,7 @@
 }
 
 html {
-  font-size: clamp(14px, 2vw, 22px); 
+  font-size: clamp(14px, 2vw, 50px); 
   scroll-behavior: smooth;
 }
 
@@ -108,9 +108,12 @@ body {
 
 /* Адаптивне зображення */
 .animal #animalImage {
+  width: clamp(100%, 200%, 300%);
   max-width: 100%;
   height: auto;
-  height: auto;
+  padding : 50px 0;
+  margin-left: 80px;
+  
 }
 
 
@@ -122,13 +125,14 @@ body {
   margin: auto;
   padding: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.5rem;
+  
 }
 
 /* Футер */
 .my-footer {
   background: linear-gradient(to right, #37A3A5, #57CC98);
   padding: 25px 0;
+  font-size: clamp(20px, 4vw, 50px);
 }
 
 /* Стилі для навігаційних посилань */
@@ -172,6 +176,7 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
   font-size: 2rem;
+  position:initial;
 }
 
 /* Додаткові медіа-запити для ще дрібніших екранів */

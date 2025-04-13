@@ -226,6 +226,7 @@ html {
   }
   
   /* Футер */
+<<<<<<< HEAD
 .my-footer {
   background: linear-gradient(to right, #37A3A5, #57CC98);
   padding: 25px 0;
@@ -295,12 +296,75 @@ html {
     font-size: 1.6rem;
     padding: 1.3rem 3.2rem;
   }
-  .nav-link {
-    font-size: 1.5rem;
-    margin: 0 10px;
+=======
+  .my-footer {
+    background: linear-gradient(to right, #37A3A5, #57CC98);
+    padding: 25px 0;
   }
-}
-
+  
+  /* Стилі для навігаційних посилань */
+>>>>>>> d388d43f2aec9f2edef20453cc3aad22e121508e
+  .nav-link {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    margin: 0 15px;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link.active,
+  .nav-link:hover {
+    color: black;
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: azure;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link.active::after,
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Стилі для кнопки в навігації */
+  .nav-link.button-bottom {
+    background-color: #37A3A5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 2rem;
+  }
+  
+  /* Додаткові медіа-запити для ще дрібніших екранів */
+  @media (max-width: 600px) {
+    .top {
+      padding: 10px;
+    }
+  
+    .text {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+  
+    .button-bottom {
+      font-size: 1.6rem;
+      padding: 1.3rem 3.2rem;
+    }
+    .nav-link {
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+  }
   
   #myModal .modal-title
   {
@@ -309,80 +373,5 @@ html {
     font-weight: bold;
     text-align: center;
   }
-
-/* Загальний стиль кнопок */
-.button-bottom {
-  font-size: 1.2rem;
-  padding: 0.75rem 2rem;
-  transition: all 0.3s ease;
-  border-radius: 0.5rem;
-  display: flex; /* Важливо для кнопок */
-  animation: example 5s linear 2s infinite alternate;
-  transition: ease-in-out delay-500 -translate-y-px-hover duration-700 scale-110-hover all 0.15s rounded-lg shadow-md;
-  background-color: #37A3A5; /* Фон для кнопки */
-  color: white; /* Колір тексту на кнопці */
-  text-decoration: none; /* Видаляємо підкреслення */
-  position: fixed; /* Для кнопок в навігації */
-}
-
-.button-bottom:hover {
-  transform: scale(1.1) translateY(-4px) rotate(-1deg);
-}
-
-.button-bottom::backdrop {
-  padding: 25px 0;
-  border-radius: 10px;
-}
-
-/* Адаптивні стилі для кнопок */
-@media (max-width: 1200px) {
-  .button-bottom {
-    font-size: 1.3rem;
-    padding: 1rem 2.5rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .button-bottom {
-    font-size: 1.4rem;
-    padding: 1.1rem 2.7rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .button-bottom {
-    font-size: 1.5rem;
-    padding: 1.2rem 3rem;
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Для ще дрібніших екранів */
-@media (max-width: 600px) {
-  .button-bottom {
-    font-size: 1.6rem;
-    padding: 1.3rem 3.2rem;
-  }
-}
-
-/* Стилі для кнопок в навігаційних посиланнях */
-.nav-link.button-bottom {
-  font-size: 2rem;
-  padding: 10px 20px;
-  border-radius: 10px;
-  background-color: #37A3A5;
-  color: white;
-  transition: background-color 0.3s ease-in-out;
-  text-decoration: none;
-  position: initial;
-}
-
-/* Стилі для кнопок в навігації */
-.nav-link.button-bottom:hover {
-  background-color: #57CC98; /* Змінюється колір при наведенні */
-  transform: scale(1.05);
-}
   
   

@@ -132,9 +132,7 @@ body {
 .my-footer {
   background: linear-gradient(to right, #37A3A5, #57CC98);
   padding: 25px 0;
-  font-size: clamp(20px, 4vw, 50px);/
-  /*Не додавати position : fixed!!!!  */
-  
+  font-size: clamp(20px, 4vw, 50px);
 }
 
 /* Стилі для навігаційних посилань */

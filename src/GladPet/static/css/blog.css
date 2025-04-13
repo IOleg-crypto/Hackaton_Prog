@@ -261,23 +261,47 @@ body {
   }
 }
 
-.Preview {
+.top {
+  position: fixed;
+}
+
+.bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  opacity: 1;
+  z-index:100;
+}
+
+/* .Preview {
   position: absolute;
   right: 450px;
   top: 10px;
 
-}
+} */
 
 .Blogs{
+  position: absolute;
   background: #17ca14;
   padding: 10px;
+  top: 20px;
+  right: 100px;
+
+  height: 500px;
+
+  width: 800px;
+
+}
+
+.btn_btn-primary{
+  font: optional;
 }
 
 
 
 .imgs {
-  height: 300px;
-  width: 400px;
+  height: 500px;
+  width: 800px;
 }
 
 .adv1{

@@ -94,6 +94,40 @@ html {
     margin-right: 10px;
   }
 
+  .top .sidebar .sidebar-content .field {
+    display: flex;
+    width : 440px;
+    height : 500px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .top .sidebar .sidebar-content .field .cat
+  {
+     width : 100px;
+     height : 100px;
+  }
+  .top .sidebar .sidebar-content .field .dog
+  {
+     width : 100px;
+     height : 100px;
+  }
+  .top .sidebar .sidebar-content .field .paw
+  {
+     width : 100px;
+     height : 100px;
+  }
+
+  .sidebar-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+
   .button-bottom:hover {
     transform: scale(1.1) translateY(-4px) rotate(-1deg);
   }

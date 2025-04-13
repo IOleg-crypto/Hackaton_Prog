@@ -1,0 +1,298 @@
+/* Основні налаштування */
+html {
+  font-size: clamp(14px, 2vw, 22px);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #1FFF5F, #139939);
+  font-size: 1rem;
+}
+
+/* Верхня частина */
+.top {
+  display: flex;
+  background: linear-gradient(
+    to right,
+    rgba(34, 87, 121, 0.65) 0,
+    #1FFF5F 24%,
+    #139939 100%
+  );
+  padding: 0;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Сайдбар */
+.sidebar .sidebar-content {
+  width: clamp(260px, 40vw, 600px);
+  height: 100vh;
+  background-color: #06A487;
+
+  box-sizing: border-box;
+  position: initial;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.sidebar-content {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: clamp(1rem, 2vh, 2rem);
+  gap: clamp(1rem, 2vh, 2rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Заголовок */
+.sidebar-content h1 {
+  color: #000;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: clamp(0.5rem, 2vh, 1rem);
+  margin-bottom: clamp(1rem, 2vh, 1.5rem);
+}
+
+/* Поле пошуку */
+.sidebar-content input {
+  width: 80%;
+  margin-left: 40px;
+  padding: clamp(0.5rem, 1vh, 1rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  border: 1px solid #ccc;
+  border-radius: clamp(0.5rem, 1vw, 1rem);
+  box-sizing: border-box;
+  margin-top: clamp(1rem, 2vh, 2rem);
+}
+
+/* Блок з іконками */
+.sidebar-content .field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.5rem, 1vh, 1rem);
+  width: 100%;
+  padding: clamp(0.5rem, 1vh, 1rem);
+  margin-top: clamp(1rem, 2vh, 2rem);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-content .field img {
+  width: clamp(60px, 10vw, 100px);
+  height: auto;
+}
+
+/* Список у сайдбарі */
+.sidebar-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1vh, 1rem);
+}
+
+/* Текст у списку */
+.sidebar-content .field-text {
+  margin-left: clamp(0.5rem, 1vw, 1rem);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Група кнопок */
+.sidebar-content .button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: clamp(0.5rem, 1vh, 1rem);
+  width: 80%;
+  margin-top: clamp(1rem, 2vh, 2rem);
+}
+
+.sidebar-content .button-group button {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  padding: clamp(0.5rem, 1vh, 1rem) clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+  border: none;
+  background-color: #37A3A5;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+.sidebar-content .button-group button:hover {
+  transform: scale(1.05);
+}
+
+/* Псевдокласи для кнопок з класом button-bottom */
+.button-bottom:hover {
+  transform: scale(1.1) translateY(-4px) rotate(-1deg);
+}
+
+.button-bottom::backdrop {
+  padding: 25px 0;
+  border-radius: 10px;
+}
+
+/* Соціальні мережі */
+.social-media .social-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 1vh, 3rem);
+  width: 400px;
+  height: auto;
+  padding: clamp(0.5rem, 1vh, 1rem);
+  margin-top: clamp(1rem, 2vh, 2rem);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-field .social-text {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin: 0;
+}
+
+/* Виправлена секція іконок */
+.social-field .social-icons {
+  display: flex;
+  flex-direction: row;
+  width : 50%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-field .social-icons img {
+  width: clamp(40px, 6vw, 60px);
+  height: 55px;
+  cursor: pointer;
+}
+
+/* Футер */
+.my-footer {
+  background: linear-gradient(to right, #37A3A5, #57CC98);
+  padding: 25px 0;
+  position: relative;
+  z-index: 0;
+}
+
+/* Навігаційні посилання */
+.nav-link {
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  margin: 0 15px;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: black;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: azure;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Кнопки в навігації */
+.nav-link.button-bottom {
+  background-color: #37A3A5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 2rem;
+}
+
+/* Медіа-запити для мобільних */
+@media (max-width: 600px) {
+  .top {
+    padding: 10px;
+  }
+
+  .text {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .button-bottom {
+    font-size: 1.6rem;
+    padding: 1.3rem 3.2rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+}
+
+/* Для дуже низьких екранів */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.Preview {
+  position: absolute;
+  right: 450px;
+  top: 10px;
+
+}
+
+.Blogs{
+  background: #17ca14;
+  padding: 10px;
+}
+
+
+
+.imgs {
+  height: 300px;
+  width: 400px;
+}
+
+.adv1{
+  padding: 10px;
+  margin: 10px;
+}
+
+.adv2{
+  padding: 10px;
+  margin: 10px;
+}
+
+.adv3{
+  padding: 10px;
+  margin: 10px;
+}
+
+

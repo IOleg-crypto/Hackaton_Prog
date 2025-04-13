@@ -42,7 +42,7 @@ body {
   flex-direction: row; 
   align-items: center; 
   justify-content: space-between; 
-}
+} 
 
 /* Для адаптивних екранів */
 @media (max-width: 768px) {

@@ -130,7 +130,6 @@ body {
   
 }
 
-
 .offersButton
 {
   display: flex;
@@ -138,7 +137,7 @@ body {
   justify-content: flex-start;
   width: 300px;
   height: 40px;
-  background-color: #176ca4;
+  background-color: transparent;
   border: none;
   padding: 0 10px;
   margin-top: 20px;
@@ -152,7 +151,11 @@ body {
 }
 
 .offersButton:hover {
-  padding-left:13px;
+  padding-left:20px;
+}
+
+.offersButton:active {
+  background-color: #0D5B8F;
 }
 
 
@@ -182,6 +185,7 @@ body {
   margin-top: 20px;
   margin-left: 0px;
   gap: 6px;
+  background-color: transparent;
   margin-left: 0px;
   cursor: pointer;
   font-family: sans-serif;
@@ -195,6 +199,7 @@ body {
 .favoriteButton:active {
   background-color: #0D5B8F;
 }
+
 
 .favoriteText {
   font-size: 14px;
@@ -215,7 +220,7 @@ body {
   justify-content: flex-start;
   width: 300px;
   height: 40px;
-  background-color: #ffffff00;
+  background-color: #176ca4;
   border: none;
   padding: 0 10px;
   margin-top: 20px;
@@ -226,11 +231,7 @@ body {
 }
 
 .requestButton:hover {
-  padding-left:20px;
-}
-
-.requestButton:active {
-  background-color: #0D5B8F;
+  padding-left:13px;
 }
 
 .requestText {

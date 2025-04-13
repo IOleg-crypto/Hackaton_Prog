@@ -4,67 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Спільнота</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="community_style.css">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Контейнер зліва + основна частина -->
-  <div class="d-flex">
-    <!-- Ліва панель -->
-    <div class="bg-light p-3" style="width: 250px; min-height: 100vh;">
-      <h5>Фільтри / Пошук</h5>
-      <div class="searchWrapper">
-        <!-- Тут можна додати поле пошуку або інший контент -->
+   <div class = "top">
+    <div class = "sidebar">
+      <div class="sidebar-content">
+          <input class="form-control sidebar-input" type="text" placeholder="Пошук" aria-label="Search">
+        </div>  
       </div>
     </div>
-
-    <!-- Основна частина (карусель і контент) -->
-    <div class="flex-grow-1 p-4">
-
-      <!-- Карусель -->
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
+    
+   <div class="bottom">
+    <div class="functionality">
+      <footer class="my-footer">
+        <!-- Навігація з використанням Bootstrap-класів -->
+        <nav class="nav justify-content-evenly">
+          <a href="#" class="nav-link button-bottom transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 duration-700">Головна</a>
+          <a href="Offers.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Оголошення</a>
+          <a href="community.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Спільнота</a>
+          <a href="donate.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Задонатити</a>   
     </div>
   </div>
-
-  <!-- Нижні кнопки -->
-  <footer class="my-footer mt-4">
-    <nav class="nav justify-content-evenly">
-      <a href="main.html" class="nav-link button-bottom transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 duration-700">Головна</a>
-      <a href="Offers.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Оголошення</a>
-      <a href="community.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Спільнота</a>
-      <a href="shelter.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Задонатити</a>
-    </nav>
-  </footer>
-
+ 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 </html>

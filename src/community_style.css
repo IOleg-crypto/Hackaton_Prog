@@ -1,6 +1,6 @@
 /* Основні налаштування */
 html {
-  font-size: clamp(14px, 2vw, 22px);
+  font-size: clamp(14px, 2vw, 25px);
   scroll-behavior: smooth;
 }
 
@@ -12,6 +12,9 @@ body {
   overflow-x: hidden;
   background: linear-gradient(to right, #b3d9ff, #a2f0c1);
   font-size: 1rem;
+  zoom: clamp(0.8, 0.8, 1.2);
+  background-size: cover;
+  
 }
 
 /* Верхня частина */
@@ -31,8 +34,8 @@ body {
 
 /* Сайдбар */
 .sidebar .sidebar-content {
-  width: clamp(260px, 40vw, 600px);
-  height: 100vh;
+  width: clamp(40vh, 40vw, 140vh);
+  height: 130vh;
   background-color: #06A487;
   box-sizing: border-box;
   position: initial;
@@ -40,6 +43,7 @@ body {
   left: 0;
   transition: transform 0.3s ease;
   z-index: 1;
+  overflow-x: auto;
 }
 
 .sidebar-content {
@@ -48,6 +52,7 @@ body {
   align-items: center;
   padding-top: clamp(1rem, 2vh, 2rem);
   gap: clamp(1rem, 2vh, 2rem);
+  
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -62,7 +67,7 @@ body {
 
 /* Поле пошуку */
 .sidebar-content input {
-  width: 80%;
+  width: clamp(80%, 90vw, 85%);
   margin-left: 40px;
   padding: clamp(0.5rem, 1vh, 1rem);
   font-size: clamp(1rem, 2vw, 1.2rem);
@@ -114,6 +119,8 @@ body {
   gap: clamp(0.5rem, 1vh, 1rem);
   width: 80%;
   margin-top: clamp(1rem, 2vh, 2rem);
+  size: clamp(1rem, 2vh, 2rem);
+  
 }
 
 .sidebar-content .button-group button {
@@ -176,12 +183,21 @@ body {
   cursor: pointer;
 }
 
+.content
+{
+   margin-left: clamp(260px, 75vw, 600px);
+   margin-right: clamp(260px, 75vw, 600px);
+   margin-top: 100px;
+   
+}
 /* Футер */
 .my-footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;        /* вище за інші блоки */
   background: linear-gradient(to right, #37A3A5, #57CC98);
   padding: 25px 0;
-  position: relative;
-  z-index: 0;
 }
 
 /* Навігаційні посилання */
@@ -225,6 +241,8 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
   font-size: 2rem;
+
+  
 }
 
 /* Медіа-запити для мобільних */
@@ -257,4 +275,46 @@ body {
   .sidenav a {
     font-size: 18px;
   }
+}
+
+/*Для новин*/
+.content .fieldNews{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: clamp(120px, 50vw,  15000px);
+  height: clamp(120px, 50vw, 4000px);
+  border-radius: 100px;
+  background-color: #7DFF91;
+ 
+  margin-top: 100px;
+  margin-left : 100px;
+  margin-bottom: 100px;
+  justify-content: center;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.fieldNews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.field-text {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.dognose {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.field-description {
+  font-size: clamp(20px , 2vw, 50px);
+  color: #333;
 }

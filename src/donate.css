@@ -226,7 +226,7 @@ html {
   }
   
   /* Футер */
-<<<<<<< HEAD
+
 .my-footer {
   background: linear-gradient(to right, #37A3A5, #57CC98);
   padding: 25px 0;
@@ -296,14 +296,12 @@ html {
     font-size: 1.6rem;
     padding: 1.3rem 3.2rem;
   }
-=======
+
   .my-footer {
     background: linear-gradient(to right, #37A3A5, #57CC98);
     padding: 25px 0;
   }
   
-  /* Стилі для навігаційних посилань */
->>>>>>> d388d43f2aec9f2edef20453cc3aad22e121508e
   .nav-link {
     color: black;
     font-weight: 500;
@@ -373,5 +371,6 @@ html {
     font-weight: bold;
     text-align: center;
   }
+}
   
   

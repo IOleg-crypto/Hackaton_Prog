@@ -55,15 +55,43 @@ html {
     font-size: 1rem; 
   }
 
-  .sidebar-input {
-    margin: 20px 30px; /* Відступ зверху та зліва/справа */
-  width: calc(100% - 60px); /* Щоб врахувати margin зліва + справа */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  box-sizing: border-box;
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрує контент по горизонталі */
+    padding-top: 30px;
+    
+  }
 
+  .sidebar-content h1 {
+    color: dark;
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-content input
+  {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left : 30px;
+  }
+  
+  .sidebar-input {
+    width: 80%; /* Або інше значення на твій смак */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 105px;
+    margin-right: 10px;
   }
 
   .button-bottom:hover {

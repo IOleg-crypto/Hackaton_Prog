@@ -320,15 +320,7 @@ body {
   color: #333;
 }
 
-/* Секція загалом */
-#rates {
-  padding: 40px 20px;
-  font-size: 50px; /* загальний базовий розмір */
-  width : 1200px;
-  height : 500px
-}
 
-/* Список з нумерацією */
 .rates-list {
   counter-reset: item;
   list-style: none;
@@ -341,7 +333,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
   padding: 20px 0;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -359,12 +350,12 @@ body {
 /* Контейнер з назвою та містом */
 .rate-item {
   flex-grow: 1;
-  margin-left: 10px;
+  
 }
 
 /* Назва */
 .rate-item h3 {
-  margin: 0;
+  
   font-size: 22px; /* збільшено */
   font-weight: 600;
   color: #222;
@@ -372,7 +363,7 @@ body {
 
 /* Місто */
 .rate-item p {
-  margin: 6px 0 0;
+  
   font-size: 16px; /* збільшено */
   color: #666;
 }
@@ -385,92 +376,7 @@ body {
   color: #ffc107;
 }
 
-/* Адаптив */
-@media (max-width: 600px) {
-  .rates-list li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .rate-stars {
-    margin-top: 10px;
-  }
-}
 
-/* Секція загалом */
-#rates {
-  padding: 40px 20px;
-
-  font-size: 600px; /* загальний базовий розмір */
-}
-
-/* Список з нумерацією */
-.rates-list {
-  counter-reset: item;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Один пункт списку */
-.rates-list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Нумерація */
-.rates-list li::before {
-  counter-increment: item;
-  content: counter(item) ".";
-  font-weight: bold;
-  margin-right: 16px;
-  font-size: 24px;
-  color: #333;
-}
-
-/* Контейнер з назвою та містом */
-.rate-item {
-  flex-grow: 1;
-  margin-left: 10px;
-}
-
-/* Назва */
-.rate-item h3 {
-  margin: 0;
-  font-size: 22px; /* збільшено */
-  font-weight: 600;
-  color: #222;
-}
-
-/* Місто */
-.rate-item p {
-  margin: 6px 0 0;
-  font-size: 16px; /* збільшено */
-  color: #666;
-}
-
-/* Зірочки */
-.rate-stars {
-  display: flex;
-  gap: 6px;
-  font-size: 22px; /* збільшено */
-  color: #ffc107;
-}
-
-/* Адаптив */
-@media (max-width: 600px) {
-  .rates-list li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .rate-stars {
-    margin-top: 10px;
-  }
-}
 
 

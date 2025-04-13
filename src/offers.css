@@ -10,10 +10,9 @@ body {
 .top-box {
   display: flex;
   flex-direction: row;
-  flex-grow: 1; 
+  height: 100vh; /* Ensures the container has a defined height */
   overflow: hidden;
 }
-
 
 .sideBar {
   display: flex;
@@ -21,14 +20,58 @@ body {
   width: 300px;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: #f7f7f71f;
+  background-color: #f7f7f73d;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border: solid 1px #f7f7f741;
-  box-shadow: 0 0 10px #f7f7f741 inset;
+  box-shadow: 0 0 20px #f7f7f741 inset;
   padding: 0;
   margin: 0;
+  flex-shrink: 0;
 }
+
+.offersGrid {
+  flex-grow: 1; 
+  z-index: 0;
+  display: grid;          
+  overflow-y: auto;         
+  overflow-x: hidden; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  min-height: 60vh;
+  height: auto;
+  background-color: rgba(162, 0, 255, 0.09);
+  border: solid #ffffff0e;
+  box-shadow: 0px 0px 20px 0.1px rgba(0, 0, 0, 0.159),
+              inset 0px 0px 20px 0.1px rgba(255, 255, 255, 0.159);
+  backdrop-filter: blur(50px);
+  border-width: 1px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  justify-content: start;
+  align-items: start;
+  padding: 40px;
+  margin: 40px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  height: 250px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #bde7c6;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.159),
+              inset 0px 0px 20px 2px rgba(255, 255, 255, 0.159);
+}
+
+
 
 .bottomBar {
   height: 60px;
@@ -133,4 +176,93 @@ button.requestButton {
   line-height: 1;              
   margin: 0;
   padding: 0;
+}
+
+.offerImageHolder {
+  width: 180px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  display:flex;
+  background-color: transparent;
+}
+
+.offerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.separationLine {
+  display:flex;
+  width:180px;
+  height: 2px;
+  border-radius:2px;
+  background-color: #353535;
+  flex-shrink: 0;
+}
+
+
+.textHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  flex: 3;
+  overflow: hidden;
+}
+
+.textHolder p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+}
+.shelterName {
+  font-family: 'Rubik', sans-serif;
+  font-size: 10px;
+  top:3px;
+  color:#75c5b1;
+}
+
+.breedName {
+  font-family: 'Rubic', sans-serif;
+  font-size: 14px;
+  top:3px;
+}
+
+.topTextbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:2px;
+}
+.greenDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  margin:5px;
+}
+
+.districtName {
+  font-family: 'Rubic', sans-serif;
+  font-size: 7px;
+  color:#797979;
+}
+
+.bottomTextbox {
+  display:flex;
+  bottom:0;
+  justify-content: space-between; 
+  align-items: center;             
+  width: 100%;
+}
+
+.IDname {
+  font-family: 'Rubic', sans-serif;
+  font-size: 10px;
+  color:#5f94b75c;
 }

@@ -395,31 +395,23 @@ body {
  
 /* bottom bar objects*/ 
 
-html {
-  font-size: clamp(14px, 2vw, 22px); 
-  scroll-behavior: smooth;
-}
 
 
-
-
-
-
-
-
-.button-bottom {
+button-bottom {
   flex: 1 1 0;                        /* кнопки рівномірно ділять простір */
   min-width: 0;                      /* дозволити стискання */
   padding: 0.3em 0.5em;
-  font-size: calc(0.5rem + 0.8vw);   /* плавне масштабування тексту */
+  font-size: 30px;   /* плавне масштабування тексту */
   white-space: nowrap;
   display: flex;
+
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
   max-width: 200px;
   box-sizing: border-box;
+
 }
 
 .button-bottom:hover {
@@ -441,20 +433,23 @@ html {
 /* Футер */
 .my-footer {
   background: linear-gradient(to right, #37A3A5, #57CC98);
-  padding: 25px 0;
+  padding: 10px 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  z-index: 10;
 }
 
 /* Стилі для навігаційних посилань */
 .nav-link {
 
-    font-size: clamp(0.4rem, 1.5vw, 1rem);
     text-decoration: none;
     color: #000;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%;               /* обмеження ширини */
-    display: inline-block;         /* щоб працював ellipsis */
+    max-width: 100%;             
+    display: inline-block;        
     transition: font-size 0.3s ease;
   
 }
@@ -487,7 +482,9 @@ html {
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  font-size: 2rem;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Додаткові медіа-запити для ще дрібніших екранів */
@@ -505,7 +502,6 @@ html {
     padding: 1.3rem 3.2rem;
   }
   .nav-link {
-    font-size: 1.5rem;
     margin: 0 10px;
   }
 }

@@ -92,7 +92,7 @@ html {
   background-color: white;
   width: 650px;
   height: 50 px;
-  font-family: unbounded;
+  font-family: 'unbounded';
   opacity: 1;
   border-radius: 15px;
   border-bottom-right-radius: 0;
@@ -138,13 +138,6 @@ html {
   height: 400px;
 }
 
-
-
-
-
-
-
-
 .support{
   font-family: unbounded;
   font-size: 16px;
@@ -152,100 +145,62 @@ html {
   margin-top: 40px;
 }
 
+.button-bottom {
+  flex: 1 1 0;                        /* кнопки рівномірно ділять простір */
+  min-width: 0;                      /* дозволити стискання */
+  padding: 0.3em 0.5em;
+  font-size: 30px;   /* плавне масштабування тексту */
+  white-space: nowrap;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  max-width: 200px;
+  box-sizing: border-box;
+
+}
+
+.button-bottom:hover {
+  transform: scale(1.05) translateY(-2px);
+}
+.button-bottom::backdrop{
+  padding: 25px 0;
+  border-radius: 10px;
+}
 
 
 
 
-  .button-bottom {
-    font-size: 1.2rem;
-    padding: 0.75rem 2rem;
-    transition: all 0.3s ease;
-    border-radius: 0.5rem;
-    display: inline-block; /* Важливо для кнопок */
-    animation: example 5s linear 2s infinite alternate;
-    transition : ease-in-out delay-500 -translate-y-px-hover duration-700 scale-110-hover all 0.15s rounded-lg shadow-md;
-  }
-  
-  .button-bottom:hover {
-    transform: scale(1.1) translateY(-4px) rotate(-1deg);
-  }
-  .button-bottom::backdrop{
-    padding: 25px 0;
-    border-radius: 10px;
-  }
-  
-  /* Збільшуємо кнопки на малих екранах */
-  @media (max-width: 1200px) {
-    .button-bottom {
-      font-size: 1.3rem;
-      padding: 1rem 2.5rem;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .button-bottom {
-      font-size: 1.4rem;
-      padding: 1.1rem 2.7rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .button-bottom {
-      font-size: 1.5rem;
-      padding: 1.2rem 3rem;
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
-    .animal #animalImage {
-      width: 200%;
-      max-width: 200%;
-      height: auto;
-      padding : 50px 0;
-     
-    }
-  }
-  
-  /* Адаптивне зображення */
-  .animal #animalImage {
-    max-width: 100%;
-    height: auto;
-    height: auto;
-  }
-  
-  
-  
-  /* Текст */
-  .text {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
-  }
-  
-  /* Футер */
+
+
+
+
+
+/* Футер */
 .my-footer {
   background: linear-gradient(to right, #37A3A5, #57CC98);
-  padding: 25px 0;
-  font-size: clamp(20px, 4vw, 50px);
-  margin-top: 100dvb;
-  position :unset;
-  
-}
-  
-/* Стилі для навігаційних посилань */
-.nav-link {
-  color: black;
-  font-weight: 500;
-  text-decoration: none;
-  position: relative;
-  margin: 0 15px;
-  padding-bottom: 5px;
-  transition: color 0.3s ease-in-out;
+  padding: 10px 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  z-index: 10;
 }
 
+/* Стилі для навігаційних посилань */
+.nav-link {
+
+    text-decoration: none;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;             
+    display: inline-block;        
+    transition: font-size 0.3s ease;
+  
+}
 .nav-link.active,
 .nav-link:hover {
   color: black;
@@ -269,18 +224,15 @@ html {
 
 /* Стилі для кнопки в навігації */
 .nav-link.button-bottom {
-  font-size: 1.2rem;
-  padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  background-color: #37A3A5;
-  color: white;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Додаткові медіа-запити для ще дрібніших екранів */
@@ -298,93 +250,15 @@ html {
     padding: 1.3rem 3.2rem;
   }
   .nav-link {
-    font-size: 1.5rem;
     margin: 0 10px;
   }
 }
 
-  
-  #myModal .modal-title
-  {
-    font-size: 2rem;
-    color: #37A3A5;
-    font-weight: bold;
-    text-align: center;
-  }
-
-/* Загальний стиль кнопок */
-.button-bottom {
-  font-size: 1.2rem;
-  padding: 0.75rem 2rem;
-  transition: all 0.3s ease;
-  border-radius: 0.5rem;
-  display: flex; /* Важливо для кнопок */
-  animation: example 5s linear 2s infinite alternate;
-  transition: ease-in-out delay-500 -translate-y-px-hover duration-700 scale-110-hover all 0.15s rounded-lg shadow-md;
-  background-color: #37A3A5; /* Фон для кнопки */
-  color: white; /* Колір тексту на кнопці */
-  text-decoration: none; /* Видаляємо підкреслення */
-  position: fixed; /* Для кнопок в навігації */
-}
-
-.button-bottom:hover {
-  transform: scale(1.1) translateY(-4px) rotate(-1deg);
-}
-
-.button-bottom::backdrop {
-  padding: 25px 0;
-  border-radius: 10px;
-}
-
-/* Адаптивні стилі для кнопок */
-@media (max-width: 1200px) {
-  .button-bottom {
-    font-size: 1.3rem;
-    padding: 1rem 2.5rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .button-bottom {
-    font-size: 1.4rem;
-    padding: 1.1rem 2.7rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .button-bottom {
-    font-size: 1.5rem;
-    padding: 1.2rem 3rem;
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Для ще дрібніших екранів */
-@media (max-width: 600px) {
-  .button-bottom {
-    font-size: 1.6rem;
-    padding: 1.3rem 3.2rem;
-  }
-}
-
-/* Стилі для кнопок в навігаційних посиланнях */
-.nav-link.button-bottom {
+#myModal .modal-title
+{
   font-size: 2rem;
-  padding: 10px 20px;
-  border-radius: 10px;
-  background-color: #37A3A5;
-  color: white;
-  transition: background-color 0.3s ease-in-out;
-  text-decoration: none;
-  position: initial;
+  color: #37A3A5;
+  font-weight: bold;
+  text-align: center;
 }
 
-/* Стилі для кнопок в навігації */
-.nav-link.button-bottom:hover {
-  background-color: #57CC98; /* Змінюється колір при наведенні */
-  transform: scale(1.05);
-}
-  
-  

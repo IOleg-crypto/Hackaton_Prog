@@ -157,14 +157,19 @@
 
 <script>
   const heartButtons = document.querySelectorAll('.heartButton');
-  heartButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const icon = button.querySelector('i');
-      icon.classList.toggle('fa-regular');
-      icon.classList.toggle('fa-solid');
-      icon.classList.toggle('active');
-    });
+
+heartButtons.forEach(button => {
+  const icon = button.querySelector('i');
+  
+  icon.classList.remove('fa-regular');
+  icon.classList.add('fa-solid', 'active');
+
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    icon.classList.toggle('fa-regular');
+    icon.classList.toggle('fa-solid');
+    icon.classList.toggle('active');
+  });
   });
 
   const popup = document.getElementById('offerPopup');

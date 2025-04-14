@@ -5,26 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shelters</title>
   <link rel="stylesheet" href="ratings.css" />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar">
-    </aside>
 
-    <main class="main-content">
+    <div class="top-box">
+
+      <div class="sidebar">
+        <div class="searchWrapper">
+          <input class="inputForm" type="search" placeholder="Знайти" aria-label="Знайти">
+        </div>
+      </div>
+
       <ol class="shelter-list">
         <li class="shelter-card">
           <div class="shelter-name">Тваринний притулок “Милосердя”</div>
           <div class="shelter-location">м. Львів</div>
           <div class="shelter-rating">
-            <i class="fas fa-star"></i>         <!-- заповнена -->
             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i> <!-- наполовину -->
-            <i class="fas fa-star"></i>         <!-- порожня -->
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
           </div>
         </li>
@@ -32,10 +34,10 @@
           <div class="shelter-name">Гостомельський притулок</div>
           <div class="shelter-location">м. Київ</div>
           <div class="shelter-rating">
-            <i class="fas fa-star"></i>        
             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i> 
-            <i class="fas fa-star"></i>         
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
           </div>
         </li>
@@ -43,10 +45,10 @@
           <div class="shelter-name">Притулок «Сіріус»</div>
           <div class="shelter-location">м. Київ</div>
           <div class="shelter-rating">
-            <i class="fas fa-star"></i>        
             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i> 
-            <i class="fas fa-star"></i>        
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
         </li>
@@ -54,10 +56,10 @@
           <div class="shelter-name">Розплідник "Meri-Stuart"</div>
           <div class="shelter-location">м. Харків</div>
           <div class="shelter-rating">
-            <i class="fas fa-star"></i>        
             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i> 
-            <i class="fas fa-star"></i>         
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
             <i class="far fa-star"></i>
           </div>
         </li>
@@ -65,10 +67,10 @@
           <div class="shelter-name">Організація "Фельдман Еко-Парк+"</div>
           <div class="shelter-location">м. Лісне</div>
           <div class="shelter-rating">
-            <i class="fas fa-star"></i>        
             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i> 
-            <i class="fas fa-star-half-alt"></i>      
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
             <i class="far fa-star"></i>
           </div>
         </li>
@@ -76,10 +78,10 @@
           <div class="shelter-name">Організація "Любов І Ласка"</div>
           <div class="shelter-location">м. Одеса</div>
           <div class="shelter-rating">
-            <i class="fas fa-star"></i>      
             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i> 
-            <i class="far fa-star"></i>         
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
         </li>
@@ -87,10 +89,10 @@
           <div class="shelter-name">Організація “Animal SOS Odesa”</div>
           <div class="shelter-location">м. Одеса</div>
           <div class="shelter-rating">
-            <i class="fas fa-star"></i>       
             <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i> 
-            <i class="far fa-star"></i>         
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
         </li>
@@ -98,15 +100,28 @@
           <div class="shelter-name">Товариство «Щасливий берег»</div>
           <div class="shelter-location">м. Київ</div>
           <div class="shelter-rating">
-            <i class="fas fa-star"></i>         
             <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i> 
-            <i class="far fa-star"></i>         
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
             <i class="far fa-star"></i>
           </div>
         </li>
       </ol>
-    </main>
+    </div>
+
+    <!-- Переміщений футер всередину .container -->
+    <div class="bottom">
+      <footer class="my-footer">
+        <nav class="nav justify-content-evenly">
+          <a href="main.html" class="nav-link button-bottom transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 duration-700">Головна</a>
+          <a href="Offers.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Оголошення</a>
+          <a href="community.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Спільнота</a>
+          <a href="donate.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Задонатити</a>   
+        </nav>
+      </footer>
+    </div>
+
   </div>
 </body>
 </html>

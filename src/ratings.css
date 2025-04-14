@@ -5,43 +5,69 @@
 }
 
 body {
-  font-family: sans-serif;
-  display: flex;
-  height: 100vh;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-}
-
-.sidebar {
-  width: 300px;
-  background-color: #4DC3A2;
-  padding: 1rem;
+  margin: 0;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  height: 100vh;
+  background: linear-gradient(115deg, #0D5B8F, #24696A,#368162);
 }
+
+.top-box {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f7f7f73d;
+
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
 
 .main-content {
   flex: 1;
   padding: 1rem;
   overflow-y: auto;
-  background: linear-gradient(to right, #06A487, #5EFE83);
+  
 }
 
 /* Список з нумерацією */
 .shelter-list {
+  flex-grow: 1;
+  z-index: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  
-  margin: 0 20px;
+  gap: 30px; /* однакова відстань між рядками й колонками */
+
+  min-height: 60vh;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+
   overflow-y: auto;
-  list-style: none;
-  counter-reset: shelter-counter;
-  padding-left: 0;
+  overflow-x: hidden;
+
+  background-color: #f7f7f73d;
+  backdrop-filter: blur(50px);
+  border-width: 1px;
+  border-radius: 5px;
+
+  align-items: start;
+
+  padding: 30px;
+  margin: 30px;
+  margin-bottom: 100px;
 }
 
 .shelter-card {
@@ -51,6 +77,7 @@ body {
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.2);
   position: relative;
+  width:100%;
   color: white;
 }
 
@@ -89,3 +116,105 @@ body {
   display: flex;
   gap: 4px;
 }
+
+
+/*bottom bar objects*/
+
+
+.button-bottom:hover {
+  transform: scale(1.05) translateY(-2px);
+}
+.button-bottom::backdrop{
+  padding: 25px 0;
+  border-radius: 10px;
+}
+
+/* Футер */
+.my-footer {
+  background: linear-gradient(to right, #37A3A5, #57CC98);
+  padding: 10px 0;
+  width: 100%;
+  position: fixed; /* або static */
+  bottom: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-bottom {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.3em 0.5em;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  max-width: 200px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000000; /* при наведенні — чорний */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: azure;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Стилі для кнопки в навігації */
+.nav-link.button-bottom {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Додаткові медіа-запити для ще дрібніших екранів */
+@media (max-width: 600px) {
+  .top {
+    padding: 10px;
+  }
+
+  .text {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .button-bottom {
+    font-size: 1.6rem;
+    padding: 1.3rem 3.2rem;
+  }
+  .nav-link {
+    margin: 0 10px;
+  }
+}
+
+#myModal .modal-title
+{
+  font-size: 2rem;
+  color: #37A3A5;
+  font-weight: bold;
+  text-align: center;
+}
+

@@ -117,45 +117,9 @@ body {
   gap: 4px;
 }
 
-.searchWrapper {
-  position: relative;
-  width: 200px;
-  margin-left: 0px;
-  margin-top: 60px;
-}
-.inputForm {
-  position:relative;
-  background-color:#E9E7E7;
-  border: none;
-  width: 300px;
-  height: 40px;
-  
-  font-family: "Unbounded";
-  padding-left: 35px;
-  outline: none;
-  
-}
-
-
-
 
 /*bottom bar objects*/
-.button-bottom {
-  flex: 1 1 0;                        /* кнопки рівномірно ділять простір */
-  min-width: 0;                      /* дозволити стискання */
-  padding: 0.3em 0.5em;
-  font-size: 30px;   /* плавне масштабування тексту */
-  white-space: nowrap;
-  display: flex;
 
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  max-width: 200px;
-  box-sizing: border-box;
-
-}
 
 .button-bottom:hover {
   transform: scale(1.05) translateY(-2px);
@@ -169,28 +133,33 @@ body {
 .my-footer {
   background: linear-gradient(to right, #37A3A5, #57CC98);
   padding: 10px 0;
-  position:absolute;
-  bottom:0;
-  width:100%;
+  width: 100%;
+  position: fixed; /* або static */
+  bottom: 0;
   z-index: 10;
 }
 
-/* Стилі для навігаційних посилань */
-.nav-link {
-
-    text-decoration: none;
-    color: #000;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;             
-    display: inline-block;        
-    transition: font-size 0.3s ease;
-  
+.nav {
+  display: flex;
+  justify-content: space-evenly;
 }
-.nav-link.active,
-.nav-link:hover {
-  color: black;
+
+.button-bottom {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.3em 0.5em;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  max-width: 200px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000000; /* при наведенні — чорний */
 }
 
 .nav-link::after {
@@ -204,8 +173,8 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-link.active::after,
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 

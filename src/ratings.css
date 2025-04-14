@@ -34,6 +34,83 @@ body {
   flex-shrink: 0;
 }
 
+.searchWrapper {
+  position: relative;
+  width: 200px;
+  margin-left: 0px;
+  margin-top: 60px;
+}
+.inputForm {
+  position:relative;
+  background-color:#E9E7E7;
+  border: none;
+  width: 300px;
+  height: 40px;
+  
+  font-family: "Unbounded";
+  padding-left: 35px;
+  outline: none;
+  
+}
+
+.sidebarButton {
+  display: flex;
+  align-items: center;        
+  justify-content: flex-start;
+  width: 300px;
+  height: 40px;
+  background-color: #ffffff00;
+  border: none;
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-left: 0px;
+  gap: 6px;
+  margin-left: 0px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.15s;
+}
+
+.sidebarButton:hover {
+  padding-left:20px;
+}
+
+.sidebarButton:active {
+  background-color: #0D5B8F;
+}
+.sidebarButton p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;              
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarButton img {
+  height:40px;
+  width:40px;
+}
+
+.social-field
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height:30px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.social-field .social-icons img {
+
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  cursor: pointer;
+}
+
 
 .main-content {
   flex: 1;

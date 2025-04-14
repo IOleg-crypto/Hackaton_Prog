@@ -1,3 +1,4 @@
+
 /* Основні налаштування */
 html {
   font-size: clamp(14px, 2vw, 25px);
@@ -10,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: linear-gradient(to right, #b3d9ff, #a2f0c1);
+  background: linear-gradient(115deg, #0D5B8F, #24696A,#368162);
   font-size: 1rem;
   zoom: clamp(0.8, 0.8, 1.2);
   background-size: cover;
@@ -20,126 +21,80 @@ body {
 /* Верхня частина */
 .top {
   display: flex;
-  background: linear-gradient(
-    to right,
-    rgba(34, 87, 121, 0.65) #009BFF,
-    #06A487 #37A3A5,
-    #57CC98 100%
-  );
-  padding: 0;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  overflow-x: auto;
-  overflow-y: auto;
-  font-size : clamp(1rem, 2vw, 2rem);
-  
+  height: 100vh; 
+  overflow: hidden;
 }
 
 /* Сайдбар */
-.sidebar .sidebar-content {
-  width: clamp(40vh, 40vw, 140vh);
-  height: clamp(100vh, 50vh, 300vh);
-  background-color: #06A487;
-  box-sizing: border-box;
-  position: initial;
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease;
-  z-index: 1;
-  overflow-x: auto;
-}
-
-.sidebar-content {
+.sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: clamp(1rem, 2vh, 2rem);
-  gap: clamp(1rem, 2vh, 2rem);
-  
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* Заголовок */
-.sidebar-content h1 {
-  color: #000;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  margin-top: clamp(0.5rem, 2vh, 1rem);
-  margin-bottom: clamp(1rem, 2vh, 1.5rem);
-}
-
-/* Поле пошуку */
-.sidebar-content input {
-  width: clamp(80%, 90vw, 85%);
-  margin-left: 40px;
-  padding: clamp(0.5rem, 1vh, 1rem);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  border: 1px solid #ccc;
-  border-radius: clamp(0.5rem, 1vw, 1rem);
-  box-sizing: border-box;
-  margin-top: clamp(1rem, 2vh, 2rem);
-}
-
-/* Блок з іконками */
-.sidebar-content .field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(0.5rem, 1vh, 1rem);
-  width: 100%;
-  padding: clamp(0.5rem, 1vh, 1rem);
-  margin-top: clamp(1rem, 2vh, 2rem);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.sidebar-content .field img {
-  width: clamp(60px, 10vw, 100px);
-  height: auto;
-}
-
-/* Список у сайдбарі */
-.sidebar-content ul {
-  list-style-type: none;
+  width: 300px;
+  height:100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f7f7f73d;
   padding: 0;
   margin: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.5rem, 1vh, 1rem);
+  flex-shrink: 0;
 }
 
-/* Текст у списку */
-.sidebar-content .field-text {
-  margin-left: clamp(0.5rem, 1vw, 1rem);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.searchWrapper {
+  position: relative;
+  width: 200px;
+  margin-left: 0px;
+  margin-top: 60px;
 }
-
-/* Група кнопок */
-.sidebar-content .button-group {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: clamp(0.5rem, 1vh, 1rem);
-  width: 80%;
-  margin-top: clamp(1rem, 2vh, 2rem);
-  size: clamp(1rem, 2vh, 2rem);
+.inputForm {
+  position:relative;
+  background-color:#E9E7E7;
+  border: none;
+  width: 300px;
+  height: 40px;
+  
+  font-family: "Unbounded";
+  padding-left: 35px;
+  outline: none;
   
 }
 
-.sidebar-content .button-group button {
-  font-size: clamp(0.9rem, 2vw, 1.3rem);
-  padding: clamp(0.5rem, 1vh, 1rem) clamp(1rem, 2vw, 1.5rem);
-  width: 100%;
+.sidebarButton {
+  display: flex;
+  align-items: center;        
+  justify-content: flex-start;
+  width: 300px;
+  height: 40px;
+  background-color: #ffffff00;
   border: none;
-  background-color: #37A3A5;
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-left: 0px;
+  gap: 6px;
+  margin-left: 0px;
   cursor: pointer;
-  transition: transform 0.4s ease-in-out;
+  font-family: sans-serif;
+  transition: all 0.15s;
 }
 
-.sidebar-content .button-group button:hover {
-  transform: scale(1.05);
+.sidebarButton:hover {
+  padding-left:13px;
 }
+
+.sidebarButton p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;              
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarButton img {
+  height:40px;
+  width:40px;
+}
+
+
 
 /* Псевдокласи для кнопок з класом button-bottom */
 .button-bottom:hover {
@@ -151,145 +106,32 @@ body {
   border-radius: 10px;
 }
 
-/* Соціальні мережі */
-.social-media .social-field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(1rem, 1vh, 3rem);
-  width: 400px;
-  height: auto;
-  padding: clamp(0.5rem, 1vh, 1rem);
-  margin-top: clamp(1rem, 2vh, 2rem);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.social-field .social-text {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  margin: 0;
-}
 
 /* Виправлена секція іконок */
-.social-field .social-icons {
+.social-field
+.social-icons {
   display: flex;
   flex-direction: row;
-  width : 50%;
-  justify-content: space-around;
+  width:100%;
+  height:30px;
+  justify-content: center;
   align-items: center;
-  list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
 }
 
 .social-field .social-icons img {
-  width: clamp(40px, 6vw, 60px);
-  height: 55px;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
   cursor: pointer;
 }
 
-.content
-{
-   margin-left: clamp(260px, 75vw, 600px);
-   margin-right: clamp(260px, 75vw, 600px);
-   margin-top: 100px;
-   
-}
-/* Футер */
-.my-footer {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;        /* вище за інші блоки */
-  background: linear-gradient(to right, #37A3A5, #57CC98);
-  padding: 25px 0;
-  
-}
 
-/* Навігаційні посилання */
-.nav-link {
-  color: black;
-  font-weight: 500;
-  text-decoration: none;
-  position: relative;
-  margin: 0 15px;
-  padding-bottom: 5px;
-  transition: color 0.3s ease-in-out;
-}
 
-.nav-link.active,
-.nav-link:hover {
-  color: black;
-}
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 0;
-  background-color: azure;
-  transition: width 0.3s ease;
-}
 
-.nav-link.active::after,
-.nav-link:hover::after {
-  width: 100%;
-}
 
-/* Кнопки в навігації */
-.nav-link.button-bottom {
-  background-color: #37A3A5;
-  color: white;
-  padding: 10px 20px;
- 
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
-  font-size: 2rem;
-
-  
-}
-
-/* Медіа-запити для мобільних */
-@media (max-width: 600px) {
-  .top {
-    padding: 10px;
-  }
-
-  .text {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-  }
-
-  .button-bottom {
-    font-size: 1.6rem;
-    padding: 1.3rem 3.2rem;
-  }
-
-  .nav-link {
-    font-size: 1.5rem;
-    margin: 0 10px;
-  }
-}
-
-/* Для дуже низьких екранів */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
-.content
-{
-  flex-grow: 1;
-  padding: 20px;
-  margin-left: 250px; /* дорівнює ширині .sidebar */
-  box-sizing: border-box;
-}
-/*Для новин*/
 .content .fieldNews{
   display: flex;
   align-items: center;
@@ -651,8 +493,120 @@ body {
 }
 
 
+.button-bottom {
+  flex: 1 1 0;                        /* кнопки рівномірно ділять простір */
+  min-width: 0;                      /* дозволити стискання */
+  padding: 0.3em 0.5em;
+  font-size: 30px;   /* плавне масштабування тексту */
+  white-space: nowrap;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  max-width: 200px;
+  box-sizing: border-box;
+
+}
+
+.button-bottom:hover {
+  transform: scale(1.05) translateY(-2px);
+}
+.button-bottom::backdrop{
+  padding: 25px 0;
+  border-radius: 10px;
+}
 
 
 
 
+
+
+
+
+
+/* Футер */
+.my-footer {
+  background: linear-gradient(to right, #37A3A5, #57CC98);
+  padding: 10px 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  z-index: 10;
+}
+
+/* Стилі для навігаційних посилань */
+.nav-link {
+
+    text-decoration: none;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;             
+    display: inline-block;        
+    transition: font-size 0.3s ease;
+  
+}
+.nav-link.active,
+.nav-link:hover {
+  color: black;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: azure;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Стилі для кнопки в навігації */
+.nav-link.button-bottom {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Додаткові медіа-запити для ще дрібніших екранів */
+@media (max-width: 600px) {
+  .top {
+    padding: 10px;
+  }
+
+  .text {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .button-bottom {
+    font-size: 1.6rem;
+    padding: 1.3rem 3.2rem;
+  }
+  .nav-link {
+    margin: 0 10px;
+  }
+}
+
+#myModal .modal-title
+{
+  font-size: 2rem;
+  color: #37A3A5;
+  font-weight: bold;
+  text-align: center;
+}
 

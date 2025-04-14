@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Домівка тварин</title>
+  <link rel="stylesheet" href="news.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-box">
+    <div class="sideBar">
+      <div class="searchWrapper">
+        <input class="inputForm" placeholder="Знайти" aria-label="Знайти">
+      </div>
+      <h1 class="text-title">Заклади</h1>
+
+      <button class="sidebarButton"><img src="../assets/icons/cat.png" alt="cat" class="cat">
+      <h1 class="field-text">
+      <a href="GladPet/blog.html" style="color: inherit; text-decoration: none;" target="_blank">GladPet</a></h1></button>
+      <button class="sidebarButton"><img src="../assets/icons/dog.png" alt="dog" class="dog"><h1 class="field-text">Ветклініка</h1></button>
+      <button class="sidebarButton"><img src="../assets/icons/paw.png" alt="paw" class="paw"><h1 class="field-text">Розплідник</h1></button>
+    
+      <button class="sidebarButton" onclick="window.location.href='news.html'">Новини</button>
+      <button class="sidebarButton" onclick="window.location.href='ratings.html'">Рейтинг притулків</button>
+      <button class="sidebarButton" onclick="window.location.href='prizes.html'">Розіграші</button>
+
+        <div class="social-field">
+          <h1 class="social-text">Наші соц.мережі</h1>
+          <ul class="social-icons">
+            <img src="../assets/icons/facebook.png" alt="facebook" class="facebook">
+            <img src="../assets/icons/instagram.png" alt="instagram" class="instagram">
+          </ul>
+        </div>
+
+    </div>
+
+    <div class="newsbox">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="fieldNews">
+              <h1 class="field-text">Порятунок собаки</h1>
+              <img src="../assets/news/dognose.png" alt="dog" class="dognose">
+              <p class="field-description">Цей пес був знайдений на околиці міста без господаря. Його врятували волонтери та доставили до притулку.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="fieldNews">
+              <h1 class="field-text">Порятунок собаки</h1>
+              <img src="../assets/news/dognose.png" alt="dog" class="dognose">
+              <p class="field-description">Цей пес був знайдений на околиці міста без господаря. Його врятували волонтери та доставили до притулку.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="fieldNews">
+              <h1 class="field-text">Порятунок собаки</h1>
+              <img src="../assets/news/dognose.png" alt="dog" class="dognose">
+              <p class="field-description">Цей пес був знайдений на околиці міста без господаря. Його врятували волонтери та доставили до притулку.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+  </div>
+
+</div>
+
+<div class="bottom">
+  <footer class="my-footer">
+    <nav class="nav justify-content-evenly">
+      <a href="main.html" class="nav-link button-bottom transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 duration-700">Головна</a>
+      <a href="Offers.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Оголошення</a>
+      <a href="news.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Спільнота</a>
+      <a href="donate.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Задонатити</a>   
+    </nav>
+  </footer>
+</div>
+
+<div id="popupBackdrop" class="popup-backdrop"></div>
+
+<div id="offerPopup" class="offer-popup">
+  <div class="popup-content">
+    <!-- Динамічно наповнюється JS -->
+  </div>
+  <button id="closePopup" class="btn btn-sm btn-secondary mt-2">Закрити</button>
+</div>
+
+</div>
+</div>
+
+
+<script>
+  const heartButtons = document.querySelectorAll('.heartButton');
+  heartButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const icon = button.querySelector('i');
+      icon.classList.toggle('fa-regular');
+      icon.classList.toggle('fa-solid');
+      icon.classList.toggle('active');
+    });
+  });
+
+  const popup = document.getElementById('offerPopup');
+  const popupBackdrop = document.getElementById('popupBackdrop');
+  const popupContent = popup.querySelector('.popup-content');
+  const closeBtn = document.getElementById('closePopup');
+
+  const offerButtons = document.querySelectorAll('.offerButton');
+
+  offerButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const offerCard = button.closest('.offer');
+
+      const imageHolderClone = offerCard.querySelector('.offerImageHolder').cloneNode(true);
+      const textHolderClone = offerCard.querySelector('.textHolder').cloneNode(true);
+
+      const detailsText = textHolderClone.querySelector('.detailsText');
+      const heartButton = textHolderClone.querySelector('.heartButton');
+      if (detailsText) detailsText.remove();
+      if (heartButton) heartButton.remove();
+
+      const name = offerCard.dataset.name;
+      const health = offerCard.dataset.health;
+      const shelter = offerCard.dataset.shelter;
+      const region = offerCard.dataset.region;
+
+      const extraInfo = document.createElement('div');
+      extraInfo.className = 'extra-info mt-3';
+      extraInfo.innerHTML = `
+        <p><strong>Ім'я:</strong> ${name}</p>
+        <p><strong>Стан здоров’я:</strong> ${health}</p>
+        <p><strong>Притулок:</strong> ${shelter}</p>
+        <p><strong>Регіон:</strong> ${region}</p>
+      `;
+
+      const respondButton = document.createElement('button');
+      respondButton.className = 'btn btn-primary mt-3';
+      respondButton.textContent = 'Відгукнутись';
+      respondButton.onclick = () => {
+        alert(`Ви відгукнулися на оголошення: ${name}`);
+        popup.style.display = 'none';
+        popupBackdrop.style.display = 'none';
+      };
+
+      popupContent.innerHTML = '';
+      popupContent.appendChild(imageHolderClone);
+      popupContent.appendChild(textHolderClone);
+      popupContent.appendChild(extraInfo);
+      popupContent.appendChild(respondButton);
+
+      popup.style.display = 'block';
+      popupBackdrop.style.display = 'block';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+    popupBackdrop.style.display = 'none';
+  });
+
+  popupBackdrop.addEventListener('click', () => {
+    popup.style.display = 'none';
+    popupBackdrop.style.display = 'none';
+  });
+</script>

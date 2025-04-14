@@ -10,41 +10,37 @@
 </head>
 <body>
   <div class="top">
-    <div class="sidebar">
-      <div class="sidebar-content">
-        <div class="input-group sidebar-input-group">
-          <input type="text" placeholder="Пошук" aria-label="Search">
-          <span class="input-group-text"><i class="bi bi-search"></i></span>
+
+    
+     <div class="sidebar"> 
+      
+        <div class="searchWrapper">
+          <input class="inputForm" placeholder="Знайти" aria-label="Знайти">
         </div>
         <h1 class="text-title">Заклади</h1>
-        <div class="field">
-          <ul class="icon-list">
-            <li><img src="../assets/icons/cat.png" alt="cat" class="cat">
-              <h1 class="field-text">
-              <a href="GladPet/blog.html" style="color: inherit; text-decoration: none;" target="_blank">GladPet</a></h1></li>
-            <li><img src="../assets/icons/dog.png" alt="dog" class="dog"><h1 class="field-text">Ветклініка</h1></li>
-            <li><img src="../assets/icons/paw.png" alt="paw" class="paw"><h1 class="field-text">Розплідник</h1></li>
-          </ul>
-        </div>
-        <div class="button-group">
-          <ul class="btn-list">
-            <li><button class="btn btn-primary active" onclick="showSection('news')">Новини</button></li>
-            <li><button class="btn btn-primary" onclick="showSection('rates')">Рейтинг притулків</button></li>
-            <li><button class="btn btn-primary" onclick="showSection('prize')">Розіграші</button></li>
-          </ul>
-        </div>
-        <div class="social-media">
+
+        <button class="sidebarButton"><img src="../assets/icons/cat.png" alt="cat" class="cat">
+        <h1 class="field-text">
+        <a href="GladPet/blog.html" style="color: inherit; text-decoration: none;" target="_blank">GladPet</a></h1></button>
+        <button class="sidebarButton"><img src="../assets/icons/dog.png" alt="dog" class="dog"><h1 class="field-text">Ветклініка</h1></button>
+        <button class="sidebarButton"><img src="../assets/icons/paw.png" alt="paw" class="paw"><h1 class="field-text">Розплідник</h1></button>
+      
+        <button class="sidebarButton" onclick="window.location.href='news.html'">Новини</button>
+        <button class="sidebarButton" onclick="window.location.href='ratings.html'">Рейтинг притулків</button>
+        <button class="sidebarButton" onclick="showSection('prize')">Розіграші</button>
+
           <div class="social-field">
             <h1 class="social-text">Наші соц.мережі</h1>
             <ul class="social-icons">
-              <li><img src="../assets/icons/facebook.png" alt="facebook" class="facebook"></li>
-              <li><img src="../assets/icons/instagram.png" alt="instagram" class="instagram"></li>
-              <li><img src="../assets/icons/youtube.png" alt="youtube" class="youtube"></li>
+              <img src="../assets/icons/facebook.png" alt="facebook" class="facebook">
+              <img src="../assets/icons/instagram.png" alt="instagram" class="instagram">
+              <img src="../assets/icons/youtube.png" alt="youtube" class="youtube">
             </ul>
           </div>
-        </div>
+
       </div>
     </div>
+
     <div class="content">
       <section id="news">
         <div id="carouselExampleIndicators" class="carousel slide">
@@ -156,20 +152,20 @@
         </div>
       </section>
     </div>
-  </div>
+  </div> 
+  
 
-  <div class="bottom">
-    <div class="functionality">
-      <footer class="my-footer">
-        <nav class="nav justify-content-evenly">
-          <a href="main.html" class="nav-link button-bottom transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 duration-700">Головна</a>
-          <a href="Offers.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Оголошення</a>
-          <a href="community.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Спільнота</a>
-          <a href="donate.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Задонатити</a>
-        </nav>
-      </footer>
-    </div>
-  </div>
+</div>
+<div class="bottom">
+  <footer class="my-footer">
+    <nav class="nav justify-content-evenly">
+      <a href="main.html" class="nav-link button-bottom transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 duration-700">Головна</a>
+      <a href="Offers.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Оголошення</a>
+      <a href="community.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Спільнота</a>
+      <a href="donate.html" class="nav-link button-bottom transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" target="_blank">Задонатити</a>   
+    </nav>
+  </footer>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>

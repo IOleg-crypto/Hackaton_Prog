@@ -1,0 +1,564 @@
+*{
+  transition: all 0.15s;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(115deg, #0D5B8F, #24696A,#368162);
+}
+
+/*big structure boxes<-------------------------------------------------------*/
+.top-box {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f7f7f73d;
+
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 200px;
+  margin-left: 0px;
+  margin-top: 60px;
+}
+.inputForm {
+  position:relative;
+  background-color:#E9E7E7;
+  border: none;
+  width: 300px;
+  height: 40px;
+  
+  font-family: "Unbounded";
+  padding-left: 35px;
+  outline: none;
+  
+}
+
+.sidebarButton {
+  display: flex;
+  align-items: center;        
+  justify-content: flex-start;
+  width: 300px;
+  height: 40px;
+  background-color: #ffffff00;
+  border: none;
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-left: 0px;
+  gap: 6px;
+  margin-left: 0px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.15s;
+}
+
+.sidebarButton:hover {
+  padding-left:20px;
+}
+
+.sidebarButton:active {
+  background-color: #0D5B8F;
+}
+.sidebarButton p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;              
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarButton img {
+  height:40px;
+  width:40px;
+}
+
+.social-field
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height:30px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.social-field .social-icons img {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  cursor: pointer;
+}
+.newsbox {
+  flex-grow: 1;
+  z-index: 0;
+  display: flex;
+flex-direction:column;
+  
+  gap: 30px; /* однакова відстань між рядками й колонками */
+
+  min-height: 60vh;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background-color: #f7f7f73d;
+  backdrop-filter: blur(50px);
+  border-width: 1px;
+  border-radius: 5px;
+
+  align-items: start;
+
+  padding: 30px;
+  margin: 30px;
+  margin-bottom: 100px;
+}
+
+
+
+
+#offerPopup {
+  display: none;
+  position: fixed; /* центрування по вікну, а не елементу */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #bde7c6;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  font-size: 20px;
+}
+
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+/*sidebar objects<-----------------------------------------------------------*/
+
+
+.searchWrapper {
+  position: relative;
+  width: 200px;
+  margin-left: 0px;
+  margin-top: 60px;
+}
+.inputForm {
+  position:relative;
+  background-color:#E9E7E7;
+  border: none;
+  width: 300px;
+  height: 40px;
+  
+  font-family: "Unbounded";
+  padding-left: 35px;
+  outline: none;
+  
+}
+
+
+.offersButton
+{
+  display: flex;
+  align-items: center;        
+  justify-content: flex-start;
+  width: 300px;
+  height: 40px;
+  background-color: #176ca4;
+  border: none;
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-left: 0px;
+  gap: 6px;
+  margin-left: 0px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.15s;
+
+}
+
+.offersButton:hover {
+  padding-left:13px;
+}
+
+
+.offersText {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;              
+  margin: 0;
+  padding: 0;
+}
+
+.offersIcon {
+  width: 20px;
+  height: 20px;
+  display: inline;
+}
+
+.favoriteButton {
+  display: flex;
+  align-items: center;        
+  justify-content: flex-start;
+  width: 300px;
+  height: 40px;
+  background-color: #ffffff00;
+  border: none;
+  padding: 0 10px;
+  margin-top: 20px;
+  margin-left: 0px;
+  gap: 6px;
+  margin-left: 0px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.15s;
+}
+
+.favoriteButton:hover {
+  padding-left:20px;
+}
+
+.favoriteButton:active {
+  background-color: #0D5B8F;
+}
+
+.favoriteText {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;              
+  margin: 0;
+  padding: 0;
+}
+.heartIcon {
+  width: 20px;
+  height: 20px;
+  display: block;              
+}
+
+.requestButton {
+  display: flex;
+  align-items: center;        
+  justify-content: flex-start;
+  width: 300px;
+  height: 40px;
+  background-color: #ffffff00;
+  border: none;
+  padding: 0 10px;
+  margin-top: 20px;
+  gap: 6px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.15s;
+}
+
+.requestButton:hover {
+  padding-left:20px;
+}
+
+.requestButton:active {
+  background-color: #0D5B8F;
+}
+
+.requestText {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;              
+  margin: 0;
+  padding: 0;
+}
+
+.requestIcon {
+  width: 20px;
+  height: 20px;
+  display: block;              
+}
+
+/*offer objects<-------------------------------------------------------------*/
+
+.offer { 
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  height: 320px;
+  width: 240px;
+  padding: 0 10px 10px 10px;
+  border-radius: 3px;
+  background-color: #bde7c6;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.159),
+              inset 0px 0px 20px 2px rgba(255, 255, 255, 0.159);
+} 
+
+.offer:hover {
+  transform: scale(1.05);
+  z-index: 10; 
+  
+}
+
+.offer:active {
+  transform: scale(1.1);
+}
+
+.offerButton {
+  position: absolute;
+  height: 320px;
+  width: 240px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+
+.offerImageHolder {
+  width: 240px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 3px;
+  position: relative;
+  display:flex;
+  background-color: transparent;
+}
+.offerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.textHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  flex: 3;
+  overflow: hidden;
+}
+.textHolder p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+}
+.topTextbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:2px;
+}
+
+.breedName {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  top:3px;
+}
+
+.healthText {
+  font-family: 'Rubik', sans-serif;
+  font-size: 10px;
+  top:3px;
+  color:#464646;
+}
+
+.shelterName {
+  font-family: 'Rubik', sans-serif;
+  font-size: 10px;
+  top:3px;
+  color:#464646;
+}
+
+.districtName {
+  font-family: 'Rubik', sans-serif;
+  font-size: 7px;
+  color:#797979;
+}
+
+.bottomTextbox {
+  display:flex;
+  bottom:0;
+  justify-content: space-between; 
+  align-items: center;             
+  width: 100%;
+}
+.detailsText {
+  font-family: 'Rubik', sans-serif;
+  font-size: 10px;
+  color:#0000005c;
+}
+
+.heartButton {
+  background-color: transparent;
+  border:none;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.heartButton:hover {
+  transform: scale(1.5);
+}
+
+.heartButton i.active {
+  color: red;
+  transition: color 0.3s ease;
+}
+
+/*offer icons<---------------------------------------------------------------*/
+
+.greenDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  margin:5px;
+}
+ 
+/* bottom bar objects*/ 
+.button-bottom {
+  flex: 1 1 0;                        /* кнопки рівномірно ділять простір */
+  min-width: 0;                      /* дозволити стискання */
+  padding: 0.3em 0.5em;
+  font-size: 30px;   /* плавне масштабування тексту */
+  white-space: nowrap;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  max-width: 200px;
+  box-sizing: border-box;
+
+}
+
+.button-bottom:hover {
+  transform: scale(1.05) translateY(-2px);
+}
+.button-bottom::backdrop{
+  padding: 25px 0;
+  border-radius: 10px;
+}
+
+/* Футер */
+.my-footer {
+  background: linear-gradient(to right, #37A3A5, #57CC98);
+  padding: 10px 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  z-index: 10;
+}
+
+/* Стилі для навігаційних посилань */
+.nav-link {
+
+    text-decoration: none;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;             
+    display: inline-block;        
+    transition: font-size 0.3s ease;
+  
+}
+.nav-link.active,
+.nav-link:hover {
+  color: black;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: azure;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Стилі для кнопки в навігації */
+.nav-link.button-bottom {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Додаткові медіа-запити для ще дрібніших екранів */
+@media (max-width: 600px) {
+  .top {
+    padding: 10px;
+  }
+
+  .text {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .button-bottom {
+    font-size: 1.6rem;
+    padding: 1.3rem 3.2rem;
+  }
+  .nav-link {
+    margin: 0 10px;
+  }
+}
+
+#myModal .modal-title
+{
+  font-size: 2rem;
+  color: #37A3A5;
+  font-weight: bold;
+  text-align: center;
+}
+

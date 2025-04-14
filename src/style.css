@@ -187,14 +187,6 @@ body {
   border-radius: 10px;
 }
 
-
-
-
-
-
-
-
-
 /* Футер */
 .my-footer {
   background: linear-gradient(to right, #37A3A5, #57CC98);
@@ -203,40 +195,40 @@ body {
   bottom:0;
   width:100%;
   z-index: 10;
-}
-
-/* Стилі для навігаційних посилань */
-.nav-link {
-
-    text-decoration: none;
-    color: #000;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;             
-    display: inline-block;        
-    transition: font-size 0.3s ease;
+  margin: 50px 0 0 0;
+  box-sizing: border-box;
   
 }
-.nav-link.active,
-.nav-link:hover {
-  color: black;
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden; /* ключ! */
+  transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
+/* Псевдоелемент — абсолютний, але не виходить за межі завдяки overflow */
 .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 3px;
-  width: 0;
+  height: 2px;
   background-color: azure;
-  transition: width 0.3s ease;
+  width: 80%; /* 80% від .nav-link */
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  pointer-events: none;
 }
 
-.nav-link.active::after,
-.nav-link:hover::after {
-  width: 100%;
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
 }
 
 /* Стилі для кнопки в навігації */

@@ -293,11 +293,13 @@ body {
 
 }
 
+.input-text{
+  
+}
+
 .btn_btn-primary{
   font: optional;
 }
-
-
 
 .imgs {
   height: 500px;

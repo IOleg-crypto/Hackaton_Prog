@@ -1,6 +1,6 @@
 # 🚀 Hackaton_Prog
 
-A project created as part of a **hackathon**, focused on using modern web technologies to build a responsive and functional user interface.
+A project created as part of a **hackathon**, focused on using modern web technologies to build a responsive and functional user interface. This should be a universal platform where everyone can contribute to saving homeless animals — by giving a found animal to a shelter or adopting a new pet from there.
 
 ---
 

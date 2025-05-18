@@ -20,6 +20,55 @@ The project is built using the following technologies:
 
 ---
 
+## ✅ Функціональність / ✅ Functionality 
+
+### 🔸 Для притулків / For Shelters:
+
+- Реєстрація через email або соціальні мережі.  
+  Registration via email or social media.  
+- Вибір категорії закладу: ветклініка, притулок для собак/котів, розплідник тощо.  
+  Ability to choose a category: vet clinic, dog/cat shelter, breeder, etc.  
+- Кабінет користувача для управління оголошеннями: створення, редагування, видалення.  
+  User dashboard to manage listings: create, edit, delete.  
+- Створення оголошень з фото, описом, віком, станом здоров’я та іншими характеристиками тварини.  
+  Create listings with photos, description, age, health status, and other animal details.  
+- Можливість приймати запити від волонтерів на передачу знайдених тварин.  
+  Ability to receive requests from volunteers to transfer found animals.  
+
+### 🔸 Для волонтерів / For Volunteers:
+
+- Пошук з фільтрацією за видом тварини, віком, станом здоров’я, місцем розташування.  
+  Search with filters by animal type, age, health status, location.  
+- Створення акаунту волонтера.  
+  Volunteer account creation.  
+- Перегляд детальних оголошень: фото, опис, стан здоров’я тварини, контакти притулку.  
+  View detailed listings: photos, description, animal's health status, shelter contacts.  
+- Збереження улюблених оголошень.  
+  Save favorite listings.  
+- Зв’язок із притулком через сайт або за вказаними контактами.  
+  Contact shelters via the website or provided contact information.  
+- Функція "Знайшов тварину" — можливість передати знайдену тварину до притулку.  
+  "Found an animal" feature — ability to transfer a found animal to a shelter.  
+- Форма запиту — якщо тварина не знайдена, можна залишити запит, і притулок зв’яжеться з волонтером.  
+  Request form — if the animal isn't found, submit a request, and the shelter will contact the volunteer.  
+- Можливість задати питання притулку щодо конкретної тварини.  
+  Ability to ask the shelter questions about a specific animal.  
+
+### 🟢 Додаткова функціональність / Additional Functionality:
+
+- Розділ новин та блог.  
+  News and blog section.  
+- Розіграші на сайті — іграшки або корм у подарунок за донат.  
+  Site raffles — toys or food as gifts for donations.  
+- Pet Stories — історії порятунку тварин після знаходження або передачі до притулку.  
+  Pet Stories — rescue stories of animals after being found or transferred to a shelter.  
+- Перегляд статистики переглядів та зацікавленості в оголошеннях.  
+  View statistics of listings and user engagement.  
+- Рейтинг притулків — підняття оголошень вище при хорошому рейтингу.  
+  Shelter rating — higher-rated shelters' listings appear at the top.  
+- Перегляд відгуків про притулок.  
+  View reviews about shelters.  
+
 ## 📚 Libraries
 
 - 💠 [**Bootstrap 5.3**](https://getbootstrap.com/docs/5.3/getting-started/introduction/) — for fast and responsive layout design.
@@ -46,4 +95,5 @@ The project is built using the following technologies:
 This project supports teamwork and collaboration. Feel free to open issues, submit pull requests, or suggest new ideas!
 
 ---
+
 

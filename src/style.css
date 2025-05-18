@@ -50,12 +50,12 @@ body {
   transition: all 0.3s ease;
   border-radius: 0.5rem;
   display: inline-block; /* Важливо для кнопок */
-  animation: example 5s linear 2s infinite alternate;
-  transition : ease-in-out delay-500 -translate-y-px-hover duration-700 scale-110-hover all 0.15s rounded-lg shadow-md;
+  animation: example 5s linear 1s infinite alternate;
+  transition : ease-in-out delay-500 -translate-y-px-hover duration-700 scale-100-hover all 0.2s rounded-lg shadow-md;
 }
 
 .button-bottom:hover {
-  transform: scale(1.1) translateY(-4px) rotate(-1deg);
+  transform: scale(1.1) translateY(-3px) rotate(-1deg);
 }
 .button-bottom::backdrop{
   padding: 25px 0;
